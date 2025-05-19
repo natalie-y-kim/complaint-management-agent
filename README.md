@@ -12,29 +12,38 @@ Database: Supabase or PostgreSQL
 
 ### Clone the Repository
 
+```
 git clone https://github.com/yourusername/complaint-management-system.git
 cd complaint-management-system
+```
 
 ### Backend Setup 
 
+```
 cd server
 npm install
 touch .env
-
+```
 In .env, add:
+```
 SUPABASE_URL=https://zbuoluewjzvmtlhthkdv.supabase.co
 SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpidW9sdWV3anp2bXRsaHRoa2R2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc1OTk0NzcsImV4cCI6MjA2MzE3NTQ3N30.Q5ElfyZWI75o2-0LPhF6hAz8ile15U3j6miG5M5cd0Y
+```
 
 Then start the server:
+```
 node index.js
+```
 
 Server will run on http://localhost:5000
 
 ### Frontend Setup
 
+```
 cd ../client
 npm install
 npm run dev
+```
 App will run on: http://localhost:5173
 
 ## Assumptions and tradeoffs
