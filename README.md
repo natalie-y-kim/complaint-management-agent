@@ -2,13 +2,17 @@
 
 A mini complaint management system with client and admin views, and outline a scalable system design for real-world deployment.
 
+---
+
 ### Technologies Used
 
 * Backend: Node.js + Express
 * Frontend: React + TypeScript + Vite + Tailwind CSS
 * Database: Supabase or PostgreSQL
 
-## Setup and Installation
+---
+
+## 🚀 Setup and Installation
 
 ### Clone the Repository
 
@@ -17,21 +21,39 @@ git clone https://github.com/yourusername/complaint-management-system.git
 cd complaint-management-system
 ```
 
+## 🗃️ Database Schema (Supabase/PostgreSQL)
+
+> ⚠️ **Note**: You will need to set up your own [Supabase](https://supabase.com) project and run the following SQL to create the `complaints` table:
+
+To create the `complaints` table manually in Supabase, run the following SQL:
+
+```sql
+create table complaints (
+  id uuid primary key default uuid_generate_v4(),
+  name text not null,
+  email text not null,
+  complaint text not null,
+  status text default 'Pending',
+  created_at timestamp default now()
+);
+```
+
 ### Backend Setup 
 
-```
+```bash
 cd server
 npm install
 touch .env
 ```
+
 In .env, add:
-```
-SUPABASE_URL=https://zbuoluewjzvmtlhthkdv.supabase.co
-SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpidW9sdWV3anp2bXRsaHRoa2R2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc1OTk0NzcsImV4cCI6MjA2MzE3NTQ3N30.Q5ElfyZWI75o2-0LPhF6hAz8ile15U3j6miG5M5cd0Y
+```ini
+SUPABASE_URL=https://your-project.supabase.co
+SUPABASE_KEY=your_anon_public_key
 ```
 
 Then start the server:
-```
+```bash
 node index.js
 ```
 
@@ -39,14 +61,14 @@ Server will run on http://localhost:5000
 
 ### Frontend Setup
 
-```
+```bash
 cd ../client
 npm install
 npm run dev
 ```
 App will run on: http://localhost:5173
 
-## Assumptions and tradeoffs
+## 📐 Assumptions and tradeoffs
 
 * Supabase was chosen to simplify PostgreSQL hosting and management.
 * No authentication is added to the admin dashboard.
@@ -55,7 +77,7 @@ App will run on: http://localhost:5173
 * Backend and frontend run on separate ports with CORS enabled for development (Vite: 5173, Express: 5000).
 * Focused on clarity, usability, and functionality over full production hardening.
 
-## What I'd Improve With More Time
+## 💡 What I'd Improve With More Time
 
 * Add user authentication and role-based access for admin users
 * Add pagination and search to the admin dashboard
