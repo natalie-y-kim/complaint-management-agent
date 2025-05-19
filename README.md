@@ -4,9 +4,9 @@ A mini complaint management system with client and admin views, and outline a sc
 
 ### Technologies Used
 
-Backend: Node.js + Express
-Frontend: React + TypeScript + Vite + Tailwind CSS
-Database: Supabase or PostgreSQL
+* Backend: Node.js + Express
+* Frontend: React + TypeScript + Vite + Tailwind CSS
+* Database: Supabase or PostgreSQL
 
 ## Setup and Installation
 
