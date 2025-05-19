@@ -2,26 +2,22 @@
 
 A mini complaint management system with client and admin views, and outline a scalable system design for real-world deployment.
 
----
-
 ### Technologies Used
 
 * Backend: Node.js + Express
 * Frontend: React + TypeScript + Vite + Tailwind CSS
 * Database: Supabase or PostgreSQL
 
----
-
 ## 🚀 Setup and Installation
 
-### Clone the Repository
+### 1. Clone the Repository
 
 ```
 git clone https://github.com/yourusername/complaint-management-system.git
 cd complaint-management-system
 ```
 
-### Database Schema 
+### 2. Database Schema 
 
 > ⚠️ **Note**: You will need to set up your own [Supabase](https://supabase.com) project and run the following SQL to create the `complaints` table:
 
@@ -38,7 +34,7 @@ create table complaints (
 );
 ```
 
-### Backend Setup 
+### 3. Backend Setup 
 
 ```bash
 cd server
@@ -59,7 +55,7 @@ node index.js
 
 Server will run on http://localhost:5000
 
-### Frontend Setup
+### 4. Frontend Setup
 
 ```bash
 cd ../client
