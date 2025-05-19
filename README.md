@@ -21,7 +21,7 @@ git clone https://github.com/yourusername/complaint-management-system.git
 cd complaint-management-system
 ```
 
-## 🗃️ Database Schema (Supabase/PostgreSQL)
+### Database Schema 
 
 > ⚠️ **Note**: You will need to set up your own [Supabase](https://supabase.com) project and run the following SQL to create the `complaints` table:
 
